@@ -1,0 +1,86 @@
+.icon {
+    &__favorites{
+        background-color: var(--green-color);
+        color: var(--main-color);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        cursor: pointer;
+
+        &:hover{
+            background-color: var(--dark-green-color);
+        }
+    }
+
+    &__portions{
+        background-color: var(--green-color);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        padding: 0.6rem;
+        cursor: pointer;
+
+        &:hover{
+            background-color: var(--dark-green-color);
+        }
+    }
+
+    &__share{
+        background-color: var(--background-color);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 1rem;
+        cursor: pointer;
+
+        &:hover{
+            background-color: var(--green-color);
+            color: var(--main-color);
+        }
+    }
+
+    &__leaf {
+        position: absolute;
+        background-color: var(--text-color);
+        padding: 0.8rem 0.5rem;
+        top: -1.4rem;
+        left: 90%;
+        border-radius: 0 0 50% 50%;
+
+    }
+
+    &__bulb{
+        position: absolute;
+        background-color: var(--text-color);
+        padding: 0.8rem 0.5rem;
+        top: -0.1rem;
+        left: 92%;
+        border-radius: 0 0 50% 50%;
+    }
+
+    &__info{
+        font-size: 5rem;
+    }
+
+    &__star{
+        color: var(--green-color);
+        margin-right: 0.3rem;
+    }
+
+    &__heart{
+        background-color: var(--main-color);
+        color: gray;
+        top: 0%;
+        right: 50%;
+        position: absolute;
+        padding: 0.6rem;
+        border-radius: 0 0 50% 50%;
+        
+        @media (min-width:481px) {
+            right: 5%;
+        }            
+    }
+}

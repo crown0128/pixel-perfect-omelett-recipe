@@ -1,0 +1,14 @@
+@use '../util' as u;
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    margin-inline: auto;
+    max-width: 1140px;
+
+    @include u.breakpoints(medium){
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+   }
+}
