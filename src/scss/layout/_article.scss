@@ -1,0 +1,95 @@
+@use '../util' as u;
+
+.article {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    width: 100%;
+
+    @include u.breakpoint-up(small) {
+        flex-direction: column;
+    }
+
+
+    &__img {
+        position: relative;
+
+        img {
+            border-radius: 8px 8px 0 0;
+            display: block;
+            object-fit: cover;
+            width: 50vw;
+            height: auto;
+            margin-right: 1rem;
+
+            @include u.breakpoint-up(small) {
+                display: flex;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+
+        &--reco {
+            img {
+                object-fit: cover;
+                max-width: 300px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    &__description {
+        padding-inline: 1rem;
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+
+// level and time
+
+.level {
+    display: flex;
+    flex-direction: column;
+
+    @include u.breakpoint-up(small) {
+        flex-direction: row;
+    }
+
+    &--cook,
+    &--time {
+        display: flex;
+
+        p {
+            margin-left: 0.3rem;
+        }
+    }
+
+    &--time {
+        margin-left: 0;
+
+        @include u.breakpoint-up(small) {
+            margin-left: 0.7rem;
+        }
+        &--reco {
+            margin-left: 0.7rem;
+        }
+    }
+
+    &--reco {
+        display: flex;
+        flex-direction: row;
+        .level--time {
+            margin-left: 0.7rem;
+        }
+    }
+}

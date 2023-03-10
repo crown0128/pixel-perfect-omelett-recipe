@@ -1,5 +1,5 @@
 .icon {
-    &__favorites{
+    &--favorites {
         background-color: var(--green-color);
         color: var(--main-color);
         width: 60px;
@@ -8,79 +8,100 @@
         justify-content: center;
         padding: 1rem;
         border-radius: 0.3rem;
-        cursor: pointer;
 
-        &:hover{
+        &:hover {
             background-color: var(--dark-green-color);
         }
     }
 
-    &__portions{
+    &--portions {
         background-color: var(--green-color);
         width: 45px;
         height: 45px;
         border-radius: 50%;
         padding: 0.6rem;
-        cursor: pointer;
 
-        &:hover{
+        &:hover {
             background-color: var(--dark-green-color);
         }
     }
 
-    &__share{
+    &--share {
         background-color: var(--background-color);
         width: 60px;
         height: 60px;
+        
         border-radius: 50%;
-        padding: 1rem;
-        cursor: pointer;
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
 
-        &:hover{
+        &:hover {
             background-color: var(--green-color);
-            color: var(--main-color);
         }
     }
 
-    &__leaf {
-        position: absolute;
+    
+
+    &--bulb, &--leaf{
         background-color: var(--text-color);
-        padding: 0.8rem 0.5rem;
-        top: -1.4rem;
-        left: 90%;
-        border-radius: 0 0 50% 50%;
-
-    }
-
-    &__bulb{
+        color: var(--main-color);
+        width: 50px;
+        height: 58px;
         position: absolute;
-        background-color: var(--text-color);
-        padding: 0.8rem 0.5rem;
-        top: -0.1rem;
-        left: 92%;
         border-radius: 0 0 50% 50%;
+        padding-bottom:20px;
+        padding-top:10px;
+        right: 3%;
     }
 
-    &__info{
-        font-size: 5rem;
+    &--leaf {
+        padding-left: 0.4rem;
     }
 
-    &__star{
+    &--heart {
+        right: 1rem;
+        padding: 0.6rem 0.4rem 0.4rem;
+    }
+
+    &--info {
+        font-size: 3rem;
+    }
+
+    &--star {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        &--big{
+            font-size: 2rem;
+            // &:hover{
+            //     outline: var(--dark-green-color);
+            //     background-color: cadetblue;
+            // }
+        }
+    }
+
+    &--star {
         color: var(--green-color);
         margin-right: 0.3rem;
     }
 
-    &__heart{
+    &--heart {
         background-color: var(--main-color);
-        color: gray;
-        top: 0%;
-        right: 50%;
+        color: var(--grey-color);
+        right: 0.4rem;
         position: absolute;
-        padding: 0.6rem;
+        padding: 0.6rem 0.4rem 0.4rem;
         border-radius: 0 0 50% 50%;
-        
-        @media (min-width:481px) {
-            right: 5%;
-        }            
+    }
+
+    &--cook{
+        width: 18px;
+        height: 18px;
     }
 }
+
+
+// .stars {
+//     padding-top: 0.7rem;
+//     padding-bottom: 0.7rem;
+// }

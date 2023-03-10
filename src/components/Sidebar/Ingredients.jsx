@@ -1,24 +1,29 @@
+// icons plus and minus
 import plus from '../../img/plus.svg';
 import minus from '../../img/minus.svg';
-import iconInfo from '../../img/icon-info.svg';
+// import iconInfo from '../../img/icon-info.svg';
 
-import link from '../../img/link.svg';
-import email from '../../img/email.svg';
-import sms from '../../img/sms.svg';
+import { EmailIcon, LinkIcon, SmsIcon } from '../Icons';
 
 
 function Ingredients() {
     return (
-        <div className='sidebar'>
-            <div className='sidebar__ingredients__portions'>
-                <h2>INGREDIENSER</h2>
-                <div className='portions__counter'>
-                    <img className='icon__portions' src={minus} alt="minus" />
+        <div className='sidebar__ingredients'>
+
+            <div className='sidebar__ingredients__portions counter'>
+                <h2 className='counter__text'>
+                    INGREDIENSER
+                </h2>
+                <div className='counter__input'>
+                    <img className='icon--portions' src={minus} />
                     <input type="text" value={1} />
-                    <img className='icon__portions' src={plus} alt="plus" />
+                    <img className='icon--portions' src={plus} />
                 </div>
-                <h2>PORSJONER</h2>
+                <h2 className='counter__text'>
+                    PORSJONER
+                </h2>
             </div>
+
             <div className='sidebar__ingredients__list'>
                 <ul>
                     <li>2 stk. egg</li>
@@ -39,7 +44,7 @@ function Ingredients() {
             <div className='sidebar__ingredients__values'>
                 <div className='sidebar__ingredients__values__title'>
                     <h2>NÆRINGSINNHOLD</h2>
-                    <img src={iconInfo} alt="info-icon" />
+                    <div className='icon--infos'></div>
                 </div>
                 <div className='sidebar__ingredients__values__container'>
                     <div className='values__text'>
@@ -67,18 +72,18 @@ function Ingredients() {
             <div className='sidebar__ingredients__share'>
                 <h2>DEL</h2>
                 <div className='sidebar__ingredients__share__links'>
-                    <div>
-                        <img className='icon__share' src={link} alt="link-icon" />
-                        Kopier lenke
-                    </div>
-                    <div>
-                        <img className='icon__share' src={email} alt="email-icon" />
-                        Send e-post
-                    </div>
-                    <div>
-                        <img className='icon__share' src={sms} alt="sms-icon" />
-                        Send SMS
-                    </div>
+                    <button >
+                        <LinkIcon className='icon--share' />
+                        <p>Kopier lenke </p>
+                    </button>
+                    <button >
+                        <EmailIcon className='icon--share' />
+                        <p>Send e-post</p>
+                    </button>
+                    <button >
+                        <SmsIcon className='icon--share' />
+                        <p>Send SMS</p>
+                    </button>
                 </div>
             </div>
         </div>

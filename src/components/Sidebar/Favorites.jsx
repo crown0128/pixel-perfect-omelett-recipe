@@ -1,28 +1,25 @@
+//icons
 import { FaRegHeart } from 'react-icons/fa';
-import addSquareTrolley from '../../img/add-square-trolley.svg';
-import plannerIcon from '../../img/planner-icon.svg';
-
-
+import { AddSquereTrolleyIcon, PlannerIcon } from '../Icons';
 
 function Favorites() {
     return (
-        <div className='sidebar sidebar__favorites'>
-            <button>
-                <FaRegHeart className='icon__favorites'/>
+        <div className='sidebar__favorites'>
+            <button className='btn--heart'>
+                <FaRegHeart className='icon--favorites' />
                 <span>Lagre</span>
             </button>
-            <button>
-                <img className='icon__favorites' src={addSquareTrolley} alt="add-square-trolley-icon" />
+            <button className='btn--shopping'>
+                <AddSquereTrolleyIcon className='icon--favorites' />
                 <span>Legg i handlelisten</span>
             </button>
-            <button>
-                <img className='icon__favorites' src={plannerIcon} alt="planner-icon" />
+            <button className='btn--plan'>
+                <PlannerIcon className='icon--favorites' />
                 <span>Legg i ukeplanen</span>
             </button>
         </div>
+
     )
 }
-
-
 
 export default Favorites

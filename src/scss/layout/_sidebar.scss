@@ -1,4 +1,6 @@
 @use '../layout/border' as b;
+@use '../util' as u;
+
 
 .sidebar {
     background-color: var(--main-color);
@@ -8,10 +10,12 @@
 
     &__favorites {
         display: flex;
+        align-items: center;
         justify-content: space-around;
-        border-top: b.$border;
+        border-bottom: b.$border;
         padding-top: 2rem;
         padding-bottom: 2rem;
+        position: relative;
 
         button {
             width: 30%;
@@ -22,25 +26,24 @@
         }
 
         span {
-            margin-top: 0.8rem;
             font-size: 0.7rem;
         }
 
-
-        @media (min-width:900px) {
+        @include u.breakpoint-up(medium) {
             display: block;
-            button{
-                width: 80%;
+
+            button {
+                width: 100%;
                 display: flex;
                 flex-direction: row;
                 margin-bottom: 1rem;
             }
-            span{
+
+            span {
                 margin-left: 0.8rem;
                 font-size: 0.9rem;
             }
         }
-
     }
 
     &__ingredients {
@@ -56,11 +59,11 @@
             align-items: center;
             padding: 1rem;
             border-bottom: b.$border;
-
         }
 
+
         &__list {
-            padding: 2rem 1rem;
+            padding: 2rem 0;
             line-height: 2.4rem;
 
             h3 {
@@ -68,20 +71,26 @@
                 margin-bottom: 0;
                 margin-top: 1.6rem;
             }
+
             border-bottom: b.$border;
         }
 
         &__values {
-            padding: 2rem 1rem;
+            padding: 2rem 0rem;
             align-items: left;
             border-bottom: b.$border;
 
             &__title {
                 display: flex;
                 align-items: flex-start;
+                position: relative;
 
                 img {
                     margin-left: 8px;
+                }
+                h2{
+                    display: flex;
+                    align-items: flex-start;
                 }
             }
 
@@ -109,87 +118,87 @@
             }
 
         }
-        &__share{
-            padding: 2rem 1rem;
+
+        &__share {
+            padding-block: 2rem;
             align-items: center;
-            &__links{
+
+            &__links {
                 display: flex;
+                justify-content: space-between;
                 font-size: 0.9rem;
-            }
-        }
-    }
 
-    &__recommended {
-        &__text {
-            padding-top: 2rem;
-            position: relative;
-            // img{
-            //     position: absolute;
-            //     background-color: var(--text-color);
-            //     padding: 0.8rem 0.5rem;
-            //     top: -2.4rem;
-            //     left: 90%;
-            //     border-radius: 0 0 50% 50%;
-            // }
-        }
+                button {
+                    background-color: var(--main-color);
 
-        &__img {
-            display: flex;
-            margin-bottom: 1rem;
-
-            img {
-                max-width: 300px;
-            }
-        }
-
-        &__stars {
-            color: var(--green-color);
-            margin-bottom: 1rem;
-        }
-
-        &__time {
-            display: flex;
-            font-size: 0.8rem;
-            padding-top: 0.8rem;
-            padding-bottom: 0.8rem;
-
-            div {
-                display: flex;
-                min-width: 60px;
-
-                p {
-                    margin-left: 0.5rem;
+                    p {
+                        padding-block: 0.5rem;
+                    }
                 }
             }
         }
-
     }
- 
+
+  
 }
 
+.recommended__header{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    position: relative;
+    .icon--leaf{
+        top:0;
+    }
+}
 
-
-
-
-// portions counter
-
-.portions__counter {
-    width: 180px;
+.counter {
     display: flex;
     align-items: center;
-    background-color: var(--background-color);
-    border-radius: 30px;
-    padding: 5px;
-    margin-bottom: 0.8rem;
 
-    input {
-        width: 60px;
-        font-size: 1.6rem;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 5px;
-        height: 40px;
-        margin-inline: 10px;
+    &__input {
+        display: flex;
+        align-items: center;
+        border-radius: 30px;
+        padding: 5px;
+        background-color: var(--background-color);
+
+        input {
+            width: 60px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            height: 40px;
+            margin-inline: 10px;
+        }
     }
 }
 
+.icon--infos::after{
+    content: "i";
+    width: 1rem;
+    height: 1rem;
+    font-size: 12px;
+    background-color: var(--text-color);
+    color: var(--main-color);
+    border-radius: 50%;
+    margin-left: 10px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon--infos:hover::before{
+    position: absolute;
+    font-size: 0.8rem;
+    content: "Beregnet per porsjon basert på oppskriften. Næringsinnholdet vil variere med størrelsen på porsjon og valgt tilbehør.";
+    color: var(--text-color);
+    background-color: var(--main-color);
+    max-width: 20rem;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    // min-height: 100px;
+    top: 50%;
+}

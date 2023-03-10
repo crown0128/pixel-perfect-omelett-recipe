@@ -1,0 +1,15 @@
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    &:hover {
+        color: var(--green-color);
+        text-decoration: underline;
+    }
+}
+
+.section-link{
+    &:hover{
+        text-decoration: none;
+        color: var(--text-color);
+    }
+}

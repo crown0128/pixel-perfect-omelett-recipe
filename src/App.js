@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import Recipe from './pages/Recipe';
+// import logo from './logo.svg';
+import Recipe from './pages/Recipe'
 import '../src/dist/style.css'
 
 

@@ -2,13 +2,29 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     margin-inline: auto;
-    max-width: 1140px;
 
-    @include u.breakpoints(medium){
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-   }
+    &--twocolumns {
+        grid-template-columns: 1fr;
+        @include u.breakpoint-up(medium) {
+            grid-template-columns: 1fr 2fr;
+            max-width: 1140px;
+        }
+    }
+
+    &--fourcolumns {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        
+        @include u.breakpoint-up(small) {
+            grid-template-columns: 1fr 1fr;
+            max-width: 1040px;
+            gap:22px;
+        }
+
+        @include u.breakpoint-up(medium) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
 }

@@ -1,37 +1,46 @@
+//icons
 import mobile from '../../img/mobile.jpg';
-import leaf from '../../img/leaf.svg';
 import { FaRegClock } from 'react-icons/fa';
 import { FaSuperpowers } from 'react-icons/fa';
 import Stars from '../Stars';
-
+import { LeafIcon, ChefIcon } from '../Icons';
 
 function Recommended() {
   return (
-    <div className='sidebar'>
-      <div className='sidebar__recommended__text'>
-        <img className='icon__leaf' src={leaf} alt="leaf-icon" />
-        <h2>BRUK OPP RESTENE!</h2>
-        <p>Har du noe til overs fra du lagde denne retten? Prøv denne oppskriften!</p>
-      </div>
-      <div className='sidebar__recommended__img'>
-        <img src={mobile} alt="Fajitas med biffstrimler" />
-      </div>
-      <div className='sidebar__recommended__stars'>
-        <Stars />
-      </div>
-      <div className='sidebar__recommended__title'>
-        <h2>Fajitas med biffstrimler</h2>
-      </div>
-      <div className='sidebar__recommended__time'>
-        <div>
-          <FaSuperpowers />
-          <p>Enkel</p>
+    <div className='sidebar__recommended'>
+      <a href="#" className='section-link'>
+        <div className='recommended__header'>
+          <LeafIcon className='icon--leaf' />
+          <h2>BRUK OPP RESTENE!</h2>
+          <p>Har du noe til overs fra du lagde denne retten? Prøv denne oppskriften!</p>
         </div>
-        <div>
-          <FaRegClock />
-          <p>20-40 min</p>
+
+        <div className='recommended__article article--reco'>
+          <div className='article__img--reco'>
+            <img src={mobile} alt="Fajitas med biffstrimler" />
+          </div>
+
+          <div className='article__description'>
+            <div className='stars'>
+              <Stars />
+            </div>
+            <h3 className='recipe-title'>
+              <a href="/Fajitas">Fajitas med biffstrimler
+              </a>
+            </h3>
+            <div className='level--reco'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook'/>
+                <p>Enkel</p>
+              </span>
+              <span className='level--time'>
+                <FaRegClock />
+                <p>20-40 min</p>
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   )
 }

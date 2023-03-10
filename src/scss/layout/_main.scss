@@ -1,98 +1,103 @@
 @use '../layout/border' as b;
 @use '../util/' as u;
 
-.header {
-    text-align: center;
-
-    &__btns {
-        display: flex;
-        justify-content: center;
-        color: var(--green-color);
-
-        button {
-            margin: 0.5rem;
-            border: 1px solid var(--green-color);
-            background-color: var(--main-color);
-            color: var(--green-color);
-            padding: 0.6rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-
-            &:hover{
-                background-color: var(--light-green-color);
-            }
-        }
-    }
-
-    &__title {
-        margin-top: 1.8rem;
-        align-items: flex-start;
-        justify-content: center;
-
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 20px;
-            color: var(--text-color);
-            span{
-                margin-left: 8px;
-            }
-        }
-    }
-
-    &__description {
-        line-height: 1.8;
-        padding: 1rem;
-        border-bottom: b.$border;
-
-    }
-     &__time {
-        display: flex;
-        justify-content: space-evenly;
-
-        align-items: center;
-        padding: 1rem;
-        border-bottom: b.$border;
-        span{
-            display: flex;
-            flex-direction: row;
-            min-width: 100px;
-            p{
-                margin-left: 8px;
-            }
-        }
-    }
-}
-
-
-.main {
+.maincontent {
     background-color: var(--main-color);
     margin: 1rem;
-    // margin-left: 0;
     border-radius: b.$border-radius;
     padding: 40px 32px;
 
-    &__list {  
-        h2{
+    &__header {
+        text-align: center;
+
+        &__btns {
+            display: flex;
+            justify-content: center;
+            color: var(--green-color);
+
+            button {
+                margin: 0.5rem;
+                border: 1px solid var(--green-color);
+                background-color: var(--main-color);
+                color: var(--green-color);
+                padding: 0.6rem;
+                border-radius: 20px;
+                font-size: 0.8rem;
+
+                &:hover {
+                    background-color: var(--light-green-color);
+                }
+            }
+        }
+
+        &__title {
+            margin-top: 1.8rem;
+            align-items: flex-start;
+            justify-content: center;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 20px;
+                color: var(--text-color);
+
+                span {
+                    margin-left: 8px;
+                }
+            }
+        }
+
+        &__description {
+            line-height: 1.8;
+            padding: 1rem;
+            border-bottom: b.$border;
+
+        }
+
+        &__time {
+            display: flex;
+            justify-content: space-evenly;
+
+            align-items: center;
+            padding: 1rem;
+            border-bottom: b.$border;
+
+            span {
+                display: flex;
+                flex-direction: row;
+                min-width: 100px;
+
+                p {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+
+
+    &__list {
+        h2 {
             margin-top: 2rem;
             margin-bottom: 1.3rem;
         }
 
-        li {    
-            margin-bottom: 1rem;   
+        li {
+            margin-bottom: 1rem;
             line-height: 1.6;
         }
 
-        input {
-            border: none;
-            width: 20px;
-            height: 20px;
-            margin-right: 2rem;
-            padding-bottom: 10rem;
+        label {
+            display: flex;
+            align-items: flex-start;
+
+            span {
+                margin-left: 20px;
+                max-width: 90%;
+            }
         }
 
-        p{
+        p {
             margin-top: 2.4rem;
         }
 
@@ -101,15 +106,17 @@
     &__info {
         display: flex;
         border: 1px solid var(--background-color);
-        p{
-            padding: 2rem;
+
+        p {
+            padding: 0.2rem;
             line-height: 1.6;
         }
     }
 
-    &__bigstars {
+    &__rating {
         padding: 2rem;
         text-align: center;
+        border-top: b.$border;
 
         &__stars {
             color: var(--green-color);
@@ -117,48 +124,77 @@
         }
     }
 
-    &__tips{
+    &__advice {
         background-color: var(--background-color);
         position: relative;
         margin-top: 1.4rem;
         margin-bottom: 2.6rem;
-        &__text{
-            display: flex;
-            div{
-                display: flex;
-                flex-direction: column;
-                padding: 1.4rem;
-                h2{
-                    font-size: 1.2rem;
-                    margin-top: 0.5rem;
+        display: flex;
+        flex-direction: row;
 
-                    // tu cos nie dziala
-                    // @media (min-width:900px) {
-                    //     background-color: red;
-                    // }
-                }
-                p {
-                    line-height: 1.4;
-                };
-          
-            
+        &__text {
+            margin-left: 1rem;
+
+            h2 {
+                font-size: 1.2rem;
+                margin-block: 2rem;
             }
-            img{
-                height: 200px;
-                min-width: 200px;
-                border-radius: b.$border-radius;
-                width: 200px;
-                object-fit: cover;
+
+            p {
+                width: 80%;
+            }
+        }
+
+        @media (max-width:481px) {
+            flex-direction: column;
+        }
+
+        img {
+            height: 200px;
+            min-width: 200px;
+            border-radius: b.$border-radius;
+            width: 200px;
+            object-fit: cover;
+
+            @media (max-width:481px) {
+                width: 100%;
             }
         }
 
     }
 
+    &__video {
+        .video {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
 }
 
-.video {
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-width: 25px;
+    min-height: 25px;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--grey-color);
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+    border-radius: 5px;
+
+    &:checked::before {
+        content: "\2713";
+        min-height: 25px;
+        display: block;
+        text-align: center;
+        color: var(--main-color);
+        background-color: var(--text-color);
+        border-radius: 5px;
+        border: 1px solid var(--green-color);
+    }
 }

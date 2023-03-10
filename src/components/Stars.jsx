@@ -1,13 +1,13 @@
-import { FaStar } from 'react-icons/fa';
+import { ImStarFull } from 'react-icons/im';
 
 function Stars() {
   return (
     <span className='icon__stars'>
-      <FaStar className='icon__star'/>
-      <FaStar className='icon__star'/>
-      <FaStar className='icon__star'/>
-      <FaStar className='icon__star'/>
-      <FaStar className='icon__star'/>
+      <ImStarFull className='icon--star'/>
+      <ImStarFull className='icon--star'/>
+      <ImStarFull className='icon--star'/>
+      <ImStarFull className='icon--star'/>
+      <ImStarFull className='icon--star'/>
     </span>
   )
 }

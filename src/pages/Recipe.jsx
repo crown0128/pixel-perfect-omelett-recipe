@@ -1,27 +1,17 @@
-import Mainimg from '../components/Mainimg';
-import Sidebar from '../components/Sidebar';
-import Main from '../components/Main';
+import RecipeImg from '../components/RecipeImg';
+import RecipeContent from '../components/RecipeContent';
 import Popular from '../components/Popular';
 
 function Recipe() {
     return (
-        <div className='body'>
-            <div>
-                <Mainimg />
-            </div>
-            <div className='grid'>
-                <aside className='grid__sidebar'>
-                 <Sidebar />
-                </aside>
-                <main className='grid__main'>
-                    <Main />
-                </main>
-            </div>
-            <div>
-                <Popular />
-            </div>
-        </div>
+        <body>
+            <section className='recipe'>
+                <RecipeImg />
+                <RecipeContent />
+            </section>
+            <Popular />
+        </body>
     )
 }
 
-export default Recipe
+export default Recipe;

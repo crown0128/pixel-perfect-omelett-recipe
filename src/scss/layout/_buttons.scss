@@ -1,0 +1,15 @@
+button{
+    cursor: pointer;
+}
+
+.btn{      
+    &--heart:hover{
+          &:hover::before {
+            position: absolute;
+            background-color: var(--text-color);
+            color: var(--main-color);
+            padding: 0.4rem;
+            content: "Logg inn/registrer deg for å lagre";
+          }
+    }
+}

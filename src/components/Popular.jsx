@@ -12,62 +12,73 @@ import potetmos from '../img/popular/potetmos.jpg';
 import blomkalsuppe from '../img/popular/blomkalsuppe.jpg';
 import lasagne from '../img/popular/lasagne.jpg';
 
-import { FaRegClock } from 'react-icons/fa';
-import { FaSuperpowers } from 'react-icons/fa';
+//icons
 import Stars from './Stars';
+import { FaRegClock } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
+import { ChefIcon } from './Icons';
+
 
 
 function Popular() {
   return (
-    <div className='popular'>
-      <h2>POPULÆRT AKKURAT NÅ</h2>
-      <div className='popular-grid'>
+    <section className='popular'>
+      <div className='popular__title'>
+        <h2>POPULÆRT AKKURAT NÅ</h2>
+      </div>
 
-        <article className='popular-grid__article'>
-          <div>
-            <img src={pannekaker} alt="Pannekaker" />
-          </div>
-          <div>
-            <div className='icon__heart'>
+      <div className='popular__articles grid grid--fourcolumns'>
+
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
               <FaHeart />
             </div>
-            <h3>Pannekaker</h3>
-            <div className='popular-grid__article__stars'>
+            <img src={pannekaker} alt="Pannekaker" />
+
+          </div>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Pannekaker">Pannekaker
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Middels</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>40-60 min</p>
               </span>
             </div>
           </div>
-
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
+              <FaHeart />
+            </div>
             <img src={vafler} alt="Vafler" />
           </div>
-          <div>
-            <div className='icon__heart'>
-              <FaHeart />
-            </div>
-            <h3>Vafler</h3>
-            <div className='popular-grid__article__stars'>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Vafler">Vafler
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Enkel</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>20-40 min</p>
               </span>
@@ -75,50 +86,55 @@ function Popular() {
           </div>
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
-            <img src={pølsegrateng} alt="Pølsegrateng" />
-          </div>
-          <div>
-            <div className='icon__heart'>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
               <FaHeart />
             </div>
-            <h3>Pølsegrateng</h3>
-            <div className='popular-grid__article__stars'>
+            <img src={pølsegrateng} alt="Pølsegrateng" />
+          </div>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Pølsegrateng">Pølsegrateng
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Enkel</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>40-60 min</p>
               </span>
             </div>
           </div>
-
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
+              <FaHeart />
+            </div>
             <img src={brownies} alt="Brownies" />
           </div>
-          <div>
-            <div className='icon__heart'>
-              <FaHeart />
-            </div>
-            <h3>Brownies</h3>
-            <div className='popular-grid__article__stars'>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Brownies">Brownies
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Middels</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>20-40 min</p>
               </span>
@@ -126,50 +142,55 @@ function Popular() {
           </div>
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
+              <FaHeart />
+            </div>
             <img src={chilliconcarne} alt="Chili con carne" />
           </div>
-          <div>
-            <div className='icon__heart'>
-              <FaHeart />
-            </div>
-            <h3>Chili con carne</h3>
-            <div className='popular-grid__article__stars'>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Chiliconcarne">Chili con carne
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Enkel</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>20-40 min</p>
               </span>
             </div>
-
           </div>
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
+              <FaHeart />
+            </div>
             <img src={focaccia} alt="Focaccia" />
           </div>
-          <div>
-            <div className='icon__heart'>
-              <FaHeart />
-            </div>
-            <h3>Focaccia</h3>
-            <div className='popular-grid__article__stars'>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Focaccia">Focaccia
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Middels</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>Over 60 min</p>
               </span>
@@ -177,24 +198,27 @@ function Popular() {
           </div>
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
+              <FaHeart />
+            </div>
             <img src={kanelboller} alt="Kanelknuter" />
           </div>
-          <div>
-            <div className='icon__heart'>
-              <FaHeart />
-            </div>
-            <h3>Kanelknuter</h3>
-            <div className='popular-grid__article__stars'>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Kanelknuter">Kanelknuter
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Enkel</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>Over 60 min</p>
               </span>
@@ -202,24 +226,27 @@ function Popular() {
           </div>
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
+              <FaHeart />
+            </div>
             <img src={fiskegrateng} alt="Fiskegrateng" />
           </div>
-          <div>
-            <div className='icon__heart'>
-              <FaHeart />
-            </div>
-            <h3>Fiskegrateng</h3>
-            <div className='popular-grid__article__stars'>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Fiskegrateng">Fiskegrateng
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Enkel</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>20-40 min</p>
               </span>
@@ -227,24 +254,27 @@ function Popular() {
           </div>
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
+              <FaHeart />
+            </div>
             <img src={finnbiff} alt="finnbiff" />
           </div>
-          <div>
-            <div className='icon__heart'>
-              <FaHeart />
-            </div>
-            <h3>Finnbiff</h3>
-            <div className='popular-grid__article__stars'>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Finnbiff">Finnbiff
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Enkel</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>20-40 min</p>
               </span>
@@ -252,24 +282,27 @@ function Popular() {
           </div>
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
+              <FaHeart />
+            </div>
             <img src={potetmos} alt="Potetmos" />
           </div>
-          <div>
-            <div className='icon__heart'>
-              <FaHeart />
-            </div>
-            <h3>Potetmos</h3>
-            <div className='popular-grid__article__stars'>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Potetmos">Potetmos
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Middels</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>20-40 min</p>
               </span>
@@ -277,24 +310,27 @@ function Popular() {
           </div>
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
-            <img src={blomkalsuppe} alt="Blomkalsuppe" />
-          </div>
-          <div>
-            <div className='icon__heart'>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
               <FaHeart />
             </div>
-            <h3>Blomkalsuppe</h3>
-            <div className='popular-grid__article__stars'>
+            <img src={blomkalsuppe} alt="Blomkalsuppe" />
+          </div>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Blomkalsuppe">Blomkalsuppe
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Middels</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>Under 20 min</p>
               </span>
@@ -302,35 +338,37 @@ function Popular() {
           </div>
         </article>
 
-        <article className='popular-grid__article'>
-          <div>
-            <img src={lasagne} alt="Lasagne" />
-            <div className='icon__heart'>
+        <article className='popular__article article'>
+          <div className='article__img'>
+            <div className='icon--heart'>
               <FaHeart />
             </div>
+            <img src={lasagne} alt="Lasagne" />
           </div>
-          <div>
-            <h3>Lasagne</h3>
-            <div className='popular-grid__article__stars'>
+          <div className='article__description'>
+            <div className='stars'>
               <Stars />
             </div>
-            <div className='popular-grid__article__time'>
-              <span>
-                <FaSuperpowers />
+            <h3>
+              <a href="/Lasagne">Lasagne
+              </a>
+            </h3>
+            <div className='level'>
+              <span className='level--cook'>
+                <ChefIcon className='icon--cook' />
                 <p>Middels</p>
               </span>
-              <span>
+              <span className='level--time'>
                 <FaRegClock />
                 <p>Over 60 min</p>
               </span>
             </div>
-
           </div>
         </article>
 
       </div>
 
-    </div>
+    </section>
   )
 }
 
